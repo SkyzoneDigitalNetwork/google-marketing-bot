@@ -1240,7 +1240,7 @@
                     <div class="icon"><i class="fas fa-envelope"></i></div>
                     <div>
                         <p>Email</p>
-                        <p>24.7.g00glemarketing@.com</p>
+                        <p>24.7.g00glemarketing@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -1284,21 +1284,21 @@
             <p style="color: var(--text-muted); max-width: 500px; margin: 15px auto;">Premium online review services and Google Map SEO optimization. Empowering businesses worldwide.</p>
         </div>
         
-        <!-- Footer Trust Badges -->
+        <!-- Footer Trust Badges - Honest Version -->
         <div class="footer-trust-badges">
             <div class="footer-badge">
-                <i class="fas fa-certificate"></i> Verified Agency
+                <i class="fas fa-user-check"></i> Manual Work - Real Users
             </div>
             <div class="footer-badge">
-                <i class="fas fa-lock"></i> 100% Secure Payment
+                <i class="fas fa-file-invoice"></i> Pay Only For Live Reviews
             </div>
             <div class="footer-badge">
-                <i class="fas fa-headset"></i> 24/7 Support
+                <i class="fas fa-headset"></i> 24/7 Live Support
             </div>
         </div>
 
         <div style="text-align: center; padding-top: 25px; color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">
-            &copy; 2026 Google Marketing. All rights reserved.
+            &copy; 2026 Google Marketing. All rights reserved. | Built with honesty, not fake guarantees.
         </div>
     </footer>
 

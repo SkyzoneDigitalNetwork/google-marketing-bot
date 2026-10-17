@@ -363,22 +363,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        /* Popular Ribbon */
-        .ribbon {
-            position: absolute;
-            top: 25px;
-            right: -40px;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            padding: 8px 45px;
-            transform: rotate(45deg);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            text-transform: uppercase;
-        }
-
         .service-icon {
             width: 65px;
             height: 65px;
@@ -424,23 +408,27 @@
             font-size: 0.8rem;
         }
 
-        .price-tag {
+        /* New CTA Badge for Pricing */
+        .cta-badge {
             display: inline-block;
             margin-top: auto;
-            padding: 10px 18px;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 12px 18px;
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid var(--primary-color);
             border-radius: 12px;
             color: var(--text-main);
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1rem;
             text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .price-tag span {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: 700;
+        .cta-badge:hover {
+            background: rgba(59, 130, 246, 0.2);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            transform: translateY(-2px);
+            color: white;
         }
 
         /* Payment Terms & Guarantee */
@@ -490,6 +478,10 @@
             color: var(--primary-color);
         }
 
+        .payment-group {
+            margin-bottom: 30px;
+        }
+
         .payment-methods {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -500,7 +492,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            background: rgba(0,0,0,0.3);
             padding: 16px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
@@ -508,15 +499,50 @@
             font-weight: 500;
         }
 
-        .payment-item:hover {
-            border-color: var(--text-muted);
-            background: rgba(255,255,255,0.05);
+        /* Active Payment Methods Styling */
+        .active-method {
+            border-color: rgba(59, 130, 246, 0.4);
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .active-method:hover {
+            border-color: var(--primary-color);
+            background: rgba(59, 130, 246, 0.1);
             transform: translateY(-2px);
         }
 
-        .payment-item i {
+        .active-method i {
             font-size: 1.4rem;
             color: var(--primary-color);
+        }
+        
+        .active-method .fa-check-circle {
+            color: #10b981; /* Green check */
+            font-size: 1.1rem;
+            margin-left: auto;
+        }
+
+        /* Disabled Payment Methods Styling */
+        .disabled-method {
+            opacity: 0.6;
+            filter: grayscale(80%);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .disabled-method i {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+        }
+
+        .not-accepted-badge {
+            margin-left: auto;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            font-weight: 600;
         }
 
         .guarantee-list {
@@ -903,7 +929,6 @@
         
         <div class="services-grid">
             <div class="service-card">
-                <div class="ribbon">Popular</div>
                 <div class="service-icon"><i class="fab fa-google-play"></i></div>
                 <h3>Play Store Review</h3>
                 <p>Authentic and safe reviews for your mobile applications to boost visibility and credibility.</p>
@@ -912,7 +937,7 @@
                     <li><i class="fas fa-check-circle"></i> Gradual Natural Delivery</li>
                     <li><i class="fas fa-check-circle"></i> Positive Rating Impact</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$? contact me</span> / review</div>
+                <a href="#contact" class="cta-badge">📩 Get Custom Quote - Contact Us</a>
             </div>
 
             <div class="service-card">
@@ -924,7 +949,7 @@
                     <li><i class="fas fa-check-circle"></i> Local Trust Building</li>
                     <li><i class="fas fa-check-circle"></i> Detailed Reporting</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$? contact me</span> / review</div>
+                <a href="#contact" class="cta-badge">📩 Get Custom Quote - Contact Us</a>
             </div>
 
             <div class="service-card">
@@ -936,7 +961,7 @@
                     <li><i class="fas fa-check-circle"></i> Local Keyword Strategy</li>
                     <li><i class="fas fa-check-circle"></i> Ranking Monitoring</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$? contact me</span> / Project</div>
+                <a href="#contact" class="cta-badge">📩 Get Custom Quote - Contact Us</a>
             </div>
             
             <div class="service-card">
@@ -948,7 +973,7 @@
                     <li><i class="fas fa-check-circle"></i> Social Media Ads</li>
                     <li><i class="fas fa-check-circle"></i> High ROI Campaigns</li>
                 </ul>
-                <div class="price-tag"><span>Custom Quote</span></div>
+                <a href="#contact" class="cta-badge">📩 Get Custom Quote - Contact Us</a>
             </div>
         </div>
     </section>
@@ -965,27 +990,52 @@
             <!-- Payment Methods -->
             <div class="payment-panel">
                 <h3 class="panel-title"><i class="fas fa-wallet"></i> Accepted Payments</h3>
-                <p style="color: var(--text-muted); margin-bottom: 25px;">We accept a wide range of global and local payment methods for your convenience.</p>
                 
-                <div class="payment-methods">
-                    <div class="payment-item">
-                        <i class="fab fa-btc"></i> Binance Pay
+                <div class="payment-group">
+                    <h4 style="color: #10b981; margin-bottom: 15px; font-size: 1.1rem; font-weight: 600;"><i class="fas fa-check-circle" style="margin-right: 5px;"></i> We Accept (Primary)</h4>
+                    <div class="payment-methods">
+                        <div class="payment-item active-method">
+                            <i class="fas fa-mobile-alt"></i> Bkash
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="payment-item active-method">
+                            <i class="fas fa-mobile-alt"></i> Nagad
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="payment-item active-method">
+                            <i class="fab fa-bitcoin"></i> USDT (TRC20/BEP20)
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="payment-item active-method">
+                            <i class="fab fa-btc"></i> Binance Pay / Balance
+                            <i class="fas fa-check-circle"></i>
+                        </div>
                     </div>
-                    <div class="payment-item">
-                        <i class="fab fa-paypal"></i> USDT
+                </div>
+
+                <div class="payment-group" style="margin-bottom: 0;">
+                    <h4 style="color: #ef4444; margin-bottom: 15px; font-size: 1.1rem; font-weight: 600;"><i class="fas fa-times-circle" style="margin-right: 5px;"></i> Not Accepted Directly</h4>
+                    <div class="payment-methods">
+                        <div class="payment-item disabled-method">
+                            <i class="fab fa-paypal"></i> PayPal
+                            <span class="not-accepted-badge">Not Accepted</span>
+                        </div>
+                        <div class="payment-item disabled-method">
+                            <i class="fas fa-money-check-alt"></i> Payoneer
+                            <span class="not-accepted-badge">Not Accepted</span>
+                        </div>
+                        <div class="payment-item disabled-method">
+                            <i class="fas fa-exchange-alt"></i> Wise
+                            <span class="not-accepted-badge">Not Accepted</span>
+                        </div>
+                        <div class="payment-item disabled-method">
+                            <i class="fas fa-university"></i> Bank Transfer
+                            <span class="not-accepted-badge">Not Accepted</span>
+                        </div>
                     </div>
-                    <div class="payment-item">
-                        <i class="fas fa-money-check-alt"></i>
-                    </div>
-                    <div class="payment-item">
-                        <i class="fas fa-exchange-alt"></i> not Wise
-                    </div>
-                    <div class="payment-item">
-                        <i class="fas fa-university"></i> not Bank Transfer
-                    </div>
-                    <div class="payment-item">
-                        <i class="fas fa-mobile-alt"></i> Bkash / Nagad
-                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 18px; line-height: 1.6; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid var(--border-color);">
+                        <i class="fas fa-info-circle" style="color: var(--primary-color);"></i> We show these for information, but we currently don't accept them directly. Please use crypto/bKash methods, as Binance supports all crypto wallets for deposit.
+                    </p>
                 </div>
             </div>
 

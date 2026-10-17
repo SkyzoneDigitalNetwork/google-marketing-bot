@@ -656,17 +656,17 @@
 
         <div class="gallery-grid">
             <!-- Updated Review Images -->
-            <div class="gallery-item" onclick="openModal('https://i.ibb.co/N6Sgk64b/1000036468.jpg')">
-                <img src="https://i.ibb.co/N6Sgk64b/1000036468.jpg" alt="Review 1">
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/mVcbPvkH/Screenshot-20261017-172628.jpg')">
+                <img src="https://i.ibb.co.com/mVcbPvkH/Screenshot-20261017-172628.jpg" alt="Review 1">
             </div>
-            <div class="gallery-item" onclick="openModal('https://i.ibb.co/ds9nyPrW/1000220007.jpg')">
-                <img src="https://i.ibb.co/ds9nyPrW/1000220007.jpg" alt="Review 2">
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/s9Z91s78/Screenshot-20261017-172704.jpg')">
+                <img src="https://i.ibb.co.com/s9Z91s78/Screenshot-20261017-172704.jpg" alt="Review 2">
             </div>
-            <div class="gallery-item" onclick="openModal('https://i.ibb.co/fcVrXz3/1000002040.jpg')">
-                <img src="https://i.ibb.co/fcVrXz3/1000002040.jpg" alt="Review 3">
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/rfZS4sk5/Screenshot-20261017-172755.jpg')">
+                <img src="https://i.ibb.co.com/rfZS4sk5/Screenshot-20261017-172755.jpg" alt="Review 3">
             </div>
-            <div class="gallery-item" onclick="openModal('https://i.ibb.co/Fb6D9NFM/1000221002.jpg')">
-                <img src="https://i.ibb.co/Fb6D9NFM/1000221002.jpg" alt="Review 4">
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/BHXRQd3M/Screenshot-20261017-172824.jpg')">
+                <img src="https://i.ibb.co.com/BHXRQd3M/Screenshot-20261017-172824.jpg" alt="Review 4">
             </div>
             <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/ZRmX1KD6/file-00000000a0c482119588a0de1452fd69.png')">
                 <img src="https://i.ibb.co.com/ZRmX1KD6/file-00000000a0c482119588a0de1452fd69.png" alt="Review 5">

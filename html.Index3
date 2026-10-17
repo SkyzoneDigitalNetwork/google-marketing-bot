@@ -1381,7 +1381,7 @@
                 window.open(`https://t.me/DirectorShakil?text=${encodedText}`, '_blank');
             } else if (platform === 'email') {
                 const subject = encodeURIComponent("New Service Request - Google Marketing");
-                window.open(`mailto:24.7.g00glemarketing@.com?subject=${subject}&body=${encodedText}`, '_blank');
+                window.open(`mailto:24.7.g00glemarketing@gmail.com?subject=${subject}&body=${encodedText}`, '_blank');
             }
         }
     </script>

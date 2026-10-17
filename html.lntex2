@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Marketing - Authentic Online Review Provider & Google Map SEO Specialist</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Premium Dark Theme Variables */
+        :root {
+            --bg-color: #030712; /* Deep dark background */
+            --surface-color: #0f172a; /* Slightly lighter surface */
+            --card-bg: rgba(30, 41, 59, 0.5); /* Glassmorphism card */
+            --primary-color: #3b82f6; /* Premium Blue */
+            --primary-glow: rgba(59, 130, 246, 0.5);
+            --accent-color: #f59e0b; /* Amber/Gold accent */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .menu-btn, .logo span {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Ambient Background Glows */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 30%, rgba(59, 130, 246, 0.12), transparent 40%),
+                radial-gradient(circle at 85% 70%, rgba(245, 158, 11, 0.08), transparent 40%);
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .logo span {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(3, 7, 18, 0.98);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            transform: translateY(-100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu ul li {
+            margin: 25px 0;
+        }
+
+        .mobile-menu ul li a {
+            font-size: 2.5rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(to right, #fff, #fff);
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: 0.3s;
+        }
+
+        .mobile-menu ul li a:hover {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 5% 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-muted);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            margin-top: 20px;
+        }
+        
+        .service-card ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .service-card ul li i {
+            color: var(--primary-color);
+            margin-top: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Process Grid */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Reviews Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 9 / 16; /* Mobile screenshot ratio */
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Advanced Contact Form */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info-panel h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-panel p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item .icon {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .info-item div p:first-child {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        .info-item div p:last-child {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0;
+        }
+
+        .custom-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+
+        .send-options {
+            display: none; /* Hidden initially */
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-wa { background-color: #25D366; color: white; border: none; }
+        .btn-tg { background-color: #0088cc; color: white; border: none; }
+        .btn-mail { background-color: #ea4335; color: white; border: none; }
+
+        .btn-wa:hover { background-color: #1ebe57; transform: translateY(-2px); }
+        .btn-tg:hover { background-color: #0077b5; transform: translateY(-2px); }
+        .btn-mail:hover { background-color: #d33828; transform: translateY(-2px); }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 130px;
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="https://i.ibb.co.com/GfswcC5V/FB-IMG-1791925489216.jpg" alt="Google Marketing Logo">
+            <span>Google Marketing</span>
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">
+            MENU <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i> CLOSE</button>
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#reviews" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <span class="badge">Professional Agency</span>
+        <h1>Hi, I'm Shakil<br><span>Authentic Review & SEO Specialist</span></h1>
+        <p>Owner of Google Marketing. We help businesses scale rapidly with safe, authentic reviews, powerful Google Map SEO, and targeted digital marketing solutions.</p>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary">
+                Start Your Project
+            </a>
+            <a href="#services" class="btn btn-outline">
+                Explore Services
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background-color: var(--surface-color);">
+        <div class="section-header">
+            <span class="badge">Our Expertise</span>
+            <h2>Premium Digital Solutions</h2>
+            <p>Comprehensive strategies engineered to elevate your brand's digital footprint and credibility.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-google-play"></i></div>
+                <h3>Play Store Review Service</h3>
+                <p>Authentic and safe reviews for your mobile applications to boost visibility and credibility.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> 100% Safe & Authentic</li>
+                    <li><i class="fas fa-check-circle"></i> Gradual Natural Delivery</li>
+                    <li><i class="fas fa-check-circle"></i> Positive Rating Impact</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3>Google Map Review Service</h3>
+                <p>Professional Google My Business reviews to dominate your local market presence.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Real User Profiles</li>
+                    <li><i class="fas fa-check-circle"></i> Local Trust Building</li>
+                    <li><i class="fas fa-check-circle"></i> Detailed Reporting</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-search-location"></i></div>
+                <h3>Google Map SEO (GMB)</h3>
+                <p>Complete optimization of your business profile for maximum local search visibility.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Profile Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Local Keyword Strategy</li>
+                    <li><i class="fas fa-check-circle"></i> Ranking Monitoring</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                <h3>Digital Marketing</h3>
+                <p>Lead generation and targeted campaigns to acquire and retain premium customers.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Lead Generation</li>
+                    <li><i class="fas fa-check-circle"></i> Social Media Ads</li>
+                    <li><i class="fas fa-check-circle"></i> High ROI Campaigns</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="section-header">
+            <span class="badge">Proof of Work</span>
+            <h2>Delivered Excellence</h2>
+            <p>Real results from real campaigns. Browse through some of the authentic reviews we've successfully delivered for our global clients.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Updated Review Images -->
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co/N6Sgk64b/1000036468.jpg')">
+                <img src="https://i.ibb.co/N6Sgk64b/1000036468.jpg" alt="Review 1">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co/ds9nyPrW/1000220007.jpg')">
+                <img src="https://i.ibb.co/ds9nyPrW/1000220007.jpg" alt="Review 2">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co/fcVrXz3/1000002040.jpg')">
+                <img src="https://i.ibb.co/fcVrXz3/1000002040.jpg" alt="Review 3">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co/Fb6D9NFM/1000221002.jpg')">
+                <img src="https://i.ibb.co/Fb6D9NFM/1000221002.jpg" alt="Review 4">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/ZRmX1KD6/file-00000000a0c482119588a0de1452fd69.png')">
+                <img src="https://i.ibb.co.com/ZRmX1KD6/file-00000000a0c482119588a0de1452fd69.png" alt="Review 5">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/WWWyWh5j/file-00000000f3688211bf516c208be32272.png')">
+                <img src="https://i.ibb.co.com/WWWyWh5j/file-00000000f3688211bf516c208be32272.png" alt="Review 6">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/jPpCMRq8/file-00000000aa388211af72b7529e687d0a.png')">
+                <img src="https://i.ibb.co.com/jPpCMRq8/file-00000000aa388211af72b7529e687d0a.png" alt="Review 7">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/qLdt0nZH/file-0000000087008211850de39d7c274736.png')">
+                <img src="https://i.ibb.co.com/qLdt0nZH/file-0000000087008211850de39d7c274736.png" alt="Review 8">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/JWX6Sg77/file-00000000bc4c8211a619175f0cb0e2d8.png')">
+                <img src="https://i.ibb.co.com/JWX6Sg77/file-00000000bc4c8211a619175f0cb0e2d8.png" alt="Review 9">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/8nwSj6w8/file-0000000052608211bfa6ecc40ccfd3c9.png')">
+                <img src="https://i.ibb.co.com/8nwSj6w8/file-0000000052608211bfa6ecc40ccfd3c9.png" alt="Review 10">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/xK14wFQT/file-000000000d148211a80dd21611e9fac5.png')">
+                <img src="https://i.ibb.co.com/xK14wFQT/file-000000000d148211a80dd21611e9fac5.png" alt="Review 11">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/fdZh23tG/file-00000000eb608211b50838dba38850f9.png')">
+                <img src="https://i.ibb.co.com/fdZh23tG/file-00000000eb608211b50838dba38850f9.png" alt="Review 12">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/Ng1TGsJ6/file-0000000061fc8211981091b3c5692d67.png')">
+                <img src="https://i.ibb.co.com/Ng1TGsJ6/file-0000000061fc8211981091b3c5692d67.png" alt="Review 13">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/QjDjxTVz/file-00000000eca482118ccd4255be5849e8.png')">
+                <img src="https://i.ibb.co.com/QjDjxTVz/file-00000000eca482118ccd4255be5849e8.png" alt="Review 14">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://i.ibb.co.com/qFcJbjZB/20261017-133905.jpg')">
+                <img src="https://i.ibb.co.com/qFcJbjZB/20261017-133905.jpg" alt="Review 15">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-color: var(--surface-color);">
+        <div class="section-header">
+            <span class="badge">The Founder</span>
+            <h2>About Shakil</h2>
+        </div>
+        
+        <div class="contact-wrapper" style="max-width: 1000px; margin: 0 auto; align-items: center;">
+            <div style="text-align: center;">
+                <img src="https://i.ibb.co.com/V0rL4WJN/IMG-20261017-142414-396.png" alt="Shakil" style="width: 250px; height: 250px; border-radius: 20px; object-fit: cover; border: 2px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: 5px;">Meet Shakil</h3>
+                <h4 style="color: var(--primary-color); margin-bottom: 20px; font-weight: 500;">Founder & CEO, Google Marketing</h4>
+                <p style="color: var(--text-muted); margin-bottom: 15px;">Shakil is the founder of Google Marketing, a premium digital agency specializing in authentic online review services and Google Map SEO. With years of deep industry expertise, he has helped hundreds of businesses dominate their local markets.</p>
+                <p style="color: var(--text-muted);">His commitment to transparency, quality, and 100% safe methods has made Google Marketing a trusted name. Shakil believes in building long-term relationships through honest communication and reliable service delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="badge">Let's Connect</span>
+            <h2>Start Your Project Today</h2>
+            <p>Fill out the details below and select your preferred platform to send us a direct message.</p>
+        </div>
+
+        <div class="contact-wrapper" style="max-width: 1100px; margin: 0 auto;">
+            
+            <!-- Contact Info Panel -->
+            <div class="contact-info-panel">
+                <h3>Contact Info</h3>
+                <p>We are available 24/7 to answer your queries and help your business grow.</p>
+                
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-building"></i></div>
+                    <div>
+                        <p>Agency</p>
+                        <p>Google Marketing</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <p>WhatsApp</p>
+                        <p>+880 1647-323233</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+                    <div>
+                        <p>Telegram</p>
+                        <p>@DirectorShakil</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <p>Email</p>
+                        <p>24.7.g00glemarketing@.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Form -->
+            <div class="custom-form">
+                <div class="input-group">
+                    <label>App Name / Map Link / ID</label>
+                    <input type="text" id="appName" placeholder="e.g. My App Name or Link" required>
+                </div>
+                <div class="input-group">
+                    <label>Your Contact Info</label>
+                    <input type="text" id="userContact" placeholder="Your WhatsApp number or Email" required>
+                </div>
+                <div class="input-group">
+                    <label>Requirements / Message</label>
+                    <textarea id="userMessage" rows="4" placeholder="Tell us what you need..."></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="mainSubmitBtn" onclick="showOptions()" style="width: 100%; margin-top: 10px;">
+                    Choose Send Option <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <!-- Hidden Send Options -->
+                <div class="send-options" id="sendOptionsBlock">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); text-align: center; margin-bottom: 5px;">Send message via:</p>
+                    <button class="btn btn-wa" onclick="sendMessage('whatsapp')"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                    <button class="btn btn-tg" onclick="sendMessage('telegram')"><i class="fab fa-telegram-plane"></i> Send via Telegram</button>
+                    <button class="btn btn-mail" onclick="sendMessage('email')"><i class="fas fa-envelope"></i> Send via Email</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #02040a; padding: 60px 5% 30px; border-top: 1px solid var(--border-color);">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://i.ibb.co.com/GfswcC5V/FB-IMG-1791925489216.jpg" alt="Logo" style="width: 50px; border-radius: 8px; margin-bottom: 15px;">
+            <h3 style="font-family: 'Outfit'; font-size: 1.5rem;">Google Marketing</h3>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 15px auto;">Premium online review services and Google Map SEO optimization. Empowering businesses worldwide.</p>
+        </div>
+        <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; color: var(--text-muted); font-size: 0.9rem;">
+            &copy; 2026 Google Marketing. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Image Modal Logic
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        function openModal(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeModal();
+        });
+
+        // Form Logic
+        function showOptions() {
+            const appName = document.getElementById('appName').value.trim();
+            const contact = document.getElementById('userContact').value.trim();
+
+            if (!appName || !contact) {
+                alert("Please fill in the App Name/ID and your Contact Info before proceeding.");
+                return;
+            }
+            
+            // Hide main button, show 3 platform buttons
+            document.getElementById('mainSubmitBtn').style.display = 'none';
+            document.getElementById('sendOptionsBlock').style.display = 'flex';
+        }
+
+        function sendMessage(platform) {
+            const appName = document.getElementById('appName').value.trim();
+            const contact = document.getElementById('userContact').value.trim();
+            const message = document.getElementById('userMessage').value.trim() || 'No additional message.';
+
+            // Format the message
+            const textRaw = `🚀 *New Service Request* 🚀\n\n📱 *App/Target:* ${appName}\n📞 *Client Info:* ${contact}\n💬 *Message:* ${message}`;
+            const encodedText = encodeURIComponent(textRaw);
+
+            if (platform === 'whatsapp') {
+                window.open(`https://wa.me/8801647323233?text=${encodedText}`, '_blank');
+            } else if (platform === 'telegram') {
+                window.open(`https://t.me/DirectorShakil?text=${encodedText}`, '_blank');
+            } else if (platform === 'email') {
+                const subject = encodeURIComponent("New Service Request - Google Marketing");
+                window.open(`mailto:24.7.g00glemarketing@.com?subject=${subject}&body=${encodedText}`, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>

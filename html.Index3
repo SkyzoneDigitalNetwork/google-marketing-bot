@@ -1134,12 +1134,12 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - Corrected Honest Version -->
     <section id="faq" style="background-color: var(--surface-color);">
         <div class="section-header">
             <span class="badge">Clear Your Doubts</span>
             <h2>Frequently Asked Questions</h2>
-            <p>Everything you need to know about our services and process before starting your project.</p>
+            <p>Everything you need to know about our honest working process.</p>
         </div>
 
         <div class="faq-container">
@@ -1149,7 +1149,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Yes, absolutely. We use 100% real user profiles with natural delivery patterns (drip-feed). Our methods strictly adhere to Google and Play Store guidelines, ensuring there is zero risk of policy violation or account bans.
+                    We use 100% manual method - real search, real install, real review. It's the safest method in the market. But we cannot give you 100% guarantee because Google Play / Map policy changes anytime and it's not our property. We always follow the safest way possible.
                 </div>
             </div>
             <div class="faq-item">
@@ -1158,7 +1158,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Our reviews are highly permanent and sticky. However, algorithm updates can occasionally affect even genuine reviews. That's why we provide a 90-day Free Refill Guarantee—if any review drops within this period, we replace it at no extra cost.
+                    Reviews can drop anytime due to Google's algorithm. That's why our system is different - we charge you ONLY for reviews that are currently live. If any review drops, you don't need to pay for it. So no tension about drop.
                 </div>
             </div>
             <div class="faq-item">
@@ -1167,7 +1167,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Delivery time depends on the project size. To maintain safety and look natural, we deliver reviews gradually (usually 2-5 reviews per day depending on the current metrics of your app/map). We'll give you a clear timeline before starting.
+                    We deliver slowly to keep it natural and safe, usually 2-5 reviews per day. The exact timeline depends on your app's current condition. We will give you a clear idea before starting.
                 </div>
             </div>
             <div class="faq-item">
@@ -1176,7 +1176,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    We accept a wide variety of local and international payment methods including Binance Pay, PayPal, Payoneer, Wise, Bank Transfer, and Bkash/Nagad. You can select what works best for you.
+                    We ONLY accept Bkash, Nagad, USDT (TRC20/BEP20), and Binance Pay / Binance Balance. We don't accept PayPal, Payoneer, Wise or Bank directly. But you can deposit to Binance from any crypto wallet and then pay us easily.
                 </div>
             </div>
             <div class="faq-item">
@@ -1185,7 +1185,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Yes! We maintain full transparency. We provide comprehensive reports including exact usernames, timestamps, and screenshots of the published reviews so you can easily track our work.
+                    Yes. We provide a daily report with all published review details. You can check the report, count the live reviews, and pay only for those live ones. Full transparency.
                 </div>
             </div>
             <div class="faq-item">
@@ -1194,7 +1194,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Definitely. We have the capacity and established network to handle large-scale campaigns for enterprise clients or multiple listings simultaneously. Contact us directly for special bulk pricing.
+                    Yes, we can handle bulk orders. But we still deliver them slowly and manually to keep it safe. Contact us for your bulk requirement and we will make a daily plan for you.
                 </div>
             </div>
         </div>

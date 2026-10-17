@@ -1039,17 +1039,21 @@
                 </div>
             </div>
 
-            <!-- Guarantee Box -->
-            <div class="guarantee-panel">
-                <h3 class="panel-title"><i class="fas fa-shield-check" style="font-family: 'Font Awesome 6 Free'; font-weight: 900;">&#xf3ed;</i> Our Guarantee</h3>
-                <ul class="guarantee-list">
-                    <li><i class="fas fa-handshake"></i> <div><strong>You will pay me only for reviews that have been published and are currently live.</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">I will submit a report every day and receive payment every day.</span></div></li>
-                    <li><i class="fas fa-lock"></i> <div><strong>100% Safe Method</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Strictly adhering to Google/Play Store policies. No account risks.</span></div></li>
-                    <li><i class="fas fa-sync-alt"></i> <div><strong>Permanent Reviews & Free Refill</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Non-drop guarantee with a 90-day free refill if any drops occur.</span></div></li>
-                    <li><i class="fas fa-undo-alt"></i> <div><strong>100% Money-Back Guarantee</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">If we fail to deliver as promised, you get a full refund.</span></div></li>
-                    <li><i class="fas fa-headset"></i> <div><strong>24/7 Live Support</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Always available to answer your queries and provide updates.</span></div></li>
-                </ul>
-            </div>
+            <!-- Guarantee Box - Corrected Version -->
+<div class="guarantee-panel">
+    <h3 class="panel-title"><i class="fas fa-shield-alt"></i> Our Working Policy</h3>
+    <ul class="guarantee-list">
+        <li><i class="fas fa-handshake"></i> <div><strong>Pay Only For Live & Published Reviews</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">We charge only for reviews that are live and visible. We submit a daily report and you pay only for the live ones in that report.</span></div></li>
+        
+        <li><i class="fas fa-lock"></i> <div><strong>100% Manual & Safe Method</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">We follow 100% manual Play Store search, install & review method. But as Google's policy changes frequently, we cannot provide any absolute guarantee - we work with the safest method possible.</span></div></li>
+        
+        <li><i class="fas fa-file-invoice-dollar"></i> <div><strong>Daily Report & Daily Payment</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">We will add only the published reviews to our daily report. You just need to count the live reviews from the report and pay for those only. No extra charge.</span></div></li>
+        
+        <li><i class="fas fa-ban"></i> <div><strong>No Refill / No Money-Back Commitment</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Since we only take payment for reviews that are already published and live, there is no need for refill or refund policy. You pay for what you get.</span></div></li>
+        
+        <li><i class="fas fa-headset"></i> <div><strong>24/7 Live Support</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Always available to answer your queries and provide live updates on WhatsApp & Telegram.</span></div></li>
+    </ul>
+</div>
         </div>
     </section>
 

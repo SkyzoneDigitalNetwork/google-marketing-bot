@@ -912,7 +912,7 @@
                     <li><i class="fas fa-check-circle"></i> Gradual Natural Delivery</li>
                     <li><i class="fas fa-check-circle"></i> Positive Rating Impact</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$0.80</span> / review</div>
+                <div class="price-tag">Starting from <span>$? contact me</span> / review</div>
             </div>
 
             <div class="service-card">
@@ -924,7 +924,7 @@
                     <li><i class="fas fa-check-circle"></i> Local Trust Building</li>
                     <li><i class="fas fa-check-circle"></i> Detailed Reporting</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$1.00</span> / review</div>
+                <div class="price-tag">Starting from <span>$? contact me</span> / review</div>
             </div>
 
             <div class="service-card">
@@ -936,7 +936,7 @@
                     <li><i class="fas fa-check-circle"></i> Local Keyword Strategy</li>
                     <li><i class="fas fa-check-circle"></i> Ranking Monitoring</li>
                 </ul>
-                <div class="price-tag">Starting from <span>$99</span> / Project</div>
+                <div class="price-tag">Starting from <span>$? contact me</span> / Project</div>
             </div>
             
             <div class="service-card">
@@ -972,16 +972,16 @@
                         <i class="fab fa-btc"></i> Binance Pay
                     </div>
                     <div class="payment-item">
-                        <i class="fab fa-paypal"></i> PayPal
+                        <i class="fab fa-paypal"></i> USDT
                     </div>
                     <div class="payment-item">
-                        <i class="fas fa-money-check-alt"></i> Payoneer
+                        <i class="fas fa-money-check-alt"></i>
                     </div>
                     <div class="payment-item">
-                        <i class="fas fa-exchange-alt"></i> Wise
+                        <i class="fas fa-exchange-alt"></i> not Wise
                     </div>
                     <div class="payment-item">
-                        <i class="fas fa-university"></i> Bank Transfer
+                        <i class="fas fa-university"></i> not Bank Transfer
                     </div>
                     <div class="payment-item">
                         <i class="fas fa-mobile-alt"></i> Bkash / Nagad
